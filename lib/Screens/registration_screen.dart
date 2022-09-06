@@ -190,7 +190,6 @@ class _Register_ScreenState extends State<Register_Screen> {
       ).then((value) =>
           setState(() {
             _loading = false;
-            print("ok");
 
             Map<String , String > userInfoMap={
                 'name' : usernamecontroller.text,
@@ -213,9 +212,9 @@ class _Register_ScreenState extends State<Register_Screen> {
         _loading = false;
       });
       if (e.code == 'weak-password') {
-        print('The password provided is too weak.');
+
       } else if (e.code == 'email-already-in-use') {
-        print('The account already exists for that email.');
+
       }
     }
 
